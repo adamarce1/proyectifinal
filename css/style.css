@@ -1,0 +1,125 @@
+body{
+    color:#2B2B2B ;
+    background-color:#848484 ;
+ }
+  
+ header{
+    background-color: #2B2B2B;
+    color: #E6E6DD;
+    margin: 0px 50px;
+    padding: 10px 30px;
+    text-decoration: none;
+ 
+ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ 
+    box-shadow: 5px 5px 15px black;
+ 
+ }
+ 
+ .logo{
+    width: 75px;
+ }
+
+
+ .none{
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2B2B2B;
+ }
+ 
+  ul{
+    display: none;
+  }
+  
+  input:checked  ~ ul{
+    display:block;
+  }
+  label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+  }
+  li {
+    display: block;
+    background: lightgrey;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid grey;
+  }
+  li:hover {
+    filter: brightness(110%);
+  }
+ 
+  .hamburguesa{
+    display: none;
+  }
+
+  .productos{
+    width: 15%;
+  }
+
+  img{
+    width: 25%;
+  }
+ 
+ 
+ table{
+    background-color: #2B2B2B;
+    color: #848484;
+    text-align: center;
+    margin-left: 42%;
+    margin-top: 10px;
+ }
+ 
+ .center{
+    text-align: center;
+ }
+ 
+ @media only screen and (max-width: 500px){
+   body{
+      align-items: center;
+   }
+   
+   table{
+       background-color: #2B2B2B;
+       color: #848484;
+       text-align: center;
+       margin-left: 80px;
+    }
+
+    .productos{
+        width: 20%;
+      }
+ }
+ 
+ .comprar{
+    margin-top: 10px;
+ }
+ 
+
+
+
+
+
+
+
+
+
+
+ footer{
+    margin-top: 10px;
+    text-align: left;
+    color: #848484;
+    background-color: #2B2B2B;
+ }
