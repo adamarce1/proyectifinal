@@ -1,41 +1,85 @@
-body{
-    color:#2B2B2B ;
-    background-color:#848484 ;
- }
-  
- header{
-    background-color: #2B2B2B;
-    color: #E6E6DD;
-    margin: 0px 50px;
-    padding: 10px 30px;
-    text-decoration: none;
- 
- 
-    display: flex;
-    justify-content: space-between;
+body {
+  color: #848484;
+  background-color: #848484;
+}
+body header {
+  background-color: #2B2B2B;
+  color: #E6E6DD;
+  margin: 0px 50px;
+  padding: 10px 30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 5px 5px 15px black;
+}
+body header .logo {
+  width: 75px;
+}
+body header nav input {
+  display: none;
+}
+body header nav label {
+  display: none;
+}
+body header nav ul {
+  display: flex;
+}
+body header nav ul li a {
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #848484;
+  margin-right: 30px;
+}
+
+.productos {
+  width: 15%;
+}
+
+.center {
+  text-align: center;
+}
+
+.pollera {
+  width: 25%;
+  text-align: center;
+}
+
+table {
+  background-color: #2B2B2B;
+  color: #848484;
+  text-align: center;
+  margin-left: 42%;
+  margin-top: 10px;
+}
+
+.comprar {
+  text-align: center;
+}
+
+footer {
+  margin-top: 10px;
+  text-align: left;
+  color: #848484;
+  background-color: #2B2B2B;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
     align-items: center;
- 
-    box-shadow: 5px 5px 15px black;
- 
- }
- 
- .logo{
-    width: 75px;
- }
-
-
- .none{
-    text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #2B2B2B;
- }
- 
-  ul{
-    display: none;
   }
-  
-  input:checked  ~ ul{
-    display:block;
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  .none {
+    text-decoration: none;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: black;
+  }
+  input:checked ~ ul {
+    display: block;
   }
   label {
     box-sizing: border-box;
@@ -49,77 +93,38 @@ body{
     text-align: center;
     user-select: none;
   }
+  ul {
+    display: inline-block;
+  }
   li {
     display: block;
-    background: lightgrey;
-    margin: 0;
+    background-color: lightgrey;
+    margin: 0px;
     padding: 10px;
     list-style: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #848484;
   }
   li:hover {
     filter: brightness(110%);
   }
- 
-  .hamburguesa{
+  .hamburguesa {
     display: none;
   }
-
-  .productos{
-    width: 15%;
-  }
-
-  img{
-    width: 25%;
-  }
- 
- 
- table{
+  table {
     background-color: #2B2B2B;
     color: #848484;
     text-align: center;
-    margin-left: 42%;
-    margin-top: 10px;
- }
- 
- .center{
-    text-align: center;
- }
- 
- @media only screen and (max-width: 500px){
-   body{
-      align-items: center;
-   }
-   
-   table{
-       background-color: #2B2B2B;
-       color: #848484;
-       text-align: center;
-       margin-left: 80px;
-    }
+    margin-left: 80px;
+  }
+  .productos {
+    width: 20%;
+  }
+}
+@media only screen and (min-width: 501px) {
+  ul {
+    list-style: none;
+    display: flex;
+  }
+}
 
-    .productos{
-        width: 20%;
-      }
- }
- 
- .comprar{
-    margin-top: 10px;
- }
- 
-
-
-
-
-
-
-
-
-
-
- footer{
-    margin-top: 10px;
-    text-align: left;
-    color: #848484;
-    background-color: #2B2B2B;
- }
+/*# sourceMappingURL=style.css.map */
