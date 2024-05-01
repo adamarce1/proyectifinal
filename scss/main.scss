@@ -2,47 +2,39 @@
 @import "utilidades/listas";
 
 
-body{
-    color: $color-primario;
-    background-color: $color-terciario;
-header{
-    background-color: $color-secundario;
-    color: $color-neutro;
+body {
+    color: #848484;
+    background-color: #848484;
+  }
+  .contenedor{
+    background-color: #2B2B2B;
+    color: #E6E6DD;
     margin: 0px 50px;
     padding: 10px 30px;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 5px 5px 15px $shadow;
-    .logo{
-        width: 75px;
-    }
-    nav{
-        input{
-            display: none;
-
-        }
-        label{
-            display: none;
-        }
-        ul{
-            display: flex;
-            
-           li{
-            a{
-                text-decoration: none;
-                font-family: $tipografia-principal;
-                color: $color-primario;
-                margin-right: 30px;
-            }
-           }
-        }
-    }
-}
-}
+    box-shadow: 5px 5px 15px black;
+  }
+  input {
+    display: none;
+  }
+  label {
+    display: none;
+  }
+   ul {
+    display: flex;
+    text-align: right;
+  }
+  a {
+    text-decoration: none;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #848484;
+    margin-right: 30px;
+  }
 .productos{
-    width: 15%;
+    width: 10%;
 }
 
 .center{
@@ -74,46 +66,57 @@ footer{
     body{
         align-items: center;
     }
-    nav{
-        display: flex;
-        align-items: center;
+    #menu-check:not(:checked) ~ nav {
+        display: none;
     }
-    .none{
-        text-decoration: none;
-        font-family: $tipografia-principal;
-        color: $shadow;
+    #menu-check:checked ~ nav {
+        display: block;
     }
-    input:checked  ~ ul{
-        display:block;
-      }
-    label{
-        box-sizing: border-box;
-        display: inline-block;
-        border: 1px solid $shadow;
-        border-radius: 5px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
+
+    #menu{
+        display: block;
+        color: #848484;
+        background-color: #2B2B2B;
+        font-size: 1.2em;
         font-weight: bold;
-        text-align: center;
-        user-select: none;
+        border: 3px solid #848484;
+        border-radius: 0.3em;
+        z-index: 9999;
     }
+
+    #menu-cerrar {
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-abrir {
+        display: none;
+    }
+
+    #menu-check:checked ~ label #menu-cerrar{
+        display: block;
+    }
+
+    nav{
+        position: absolute;
+        top: 10px;
+        right: 100px;
+        background-color: #2B2B2B;
+        opacity: 0.8;
+        color: #848484;
+    }
+
+    a{
+        color: #848484;
+    }
+
     ul{
-        display: inline-block;
+        display: block;
+        text-align: right;
     }
+
     li{
         display: block;
-        background-color: $fondo;
-        margin: 0px;
-        padding: 10px;
-        list-style: none;
-        border-bottom: 1px solid $color-primario;
-    }
-    li:hover{
-        filter: brightness(110%);
-    }
-    .hamburguesa{
-        display: none;
+        text-align: right;
     }
     table{
         background-color: $color-secundario;

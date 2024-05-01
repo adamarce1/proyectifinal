@@ -2,7 +2,8 @@ body {
   color: #848484;
   background-color: #848484;
 }
-body header {
+
+.contenedor {
   background-color: #2B2B2B;
   color: #E6E6DD;
   margin: 0px 50px;
@@ -13,19 +14,23 @@ body header {
   align-items: center;
   box-shadow: 5px 5px 15px black;
 }
-body header .logo {
-  width: 75px;
+.logo{
+  max-width: 5em;
 }
-body header nav input {
+input {
   display: none;
 }
-body header nav label {
+
+label {
   display: none;
 }
-body header nav ul {
+
+ul {
   display: flex;
+  text-align: right;
 }
-body header nav ul li a {
+
+a {
   text-decoration: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #848484;
@@ -69,46 +74,49 @@ footer {
   body {
     align-items: center;
   }
-  nav {
-    display: flex;
-    align-items: center;
+  #menu-check:not(:checked) ~ nav {
+    display: none;
   }
-  .none {
-    text-decoration: none;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    color: black;
-  }
-  input:checked ~ ul {
+  #menu-check:checked ~ nav {
     display: block;
   }
-  label {
-    box-sizing: border-box;
-    display: inline-block;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+  #menu {
+    display: block;
+    color: #848484;
+    background-color: #2B2B2B;
+    font-size: 1.2em;
     font-weight: bold;
-    text-align: center;
-    user-select: none;
+    border: 3px solid #848484;
+    border-radius: 0.3em;
+    z-index: 9999;
+  }
+  #menu-cerrar {
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-abrir {
+    display: none;
+  }
+  #menu-check:checked ~ label #menu-cerrar {
+    display: block;
+  }
+  nav {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    background-color: #2B2B2B;
+    opacity: 0.8;
+    color: #848484;
+  }
+  a {
+    color: #848484;
   }
   ul {
-    display: inline-block;
+    display: block;
+    text-align: right;
   }
   li {
     display: block;
-    background-color: lightgrey;
-    margin: 0px;
-    padding: 10px;
-    list-style: none;
-    border-bottom: 1px solid #848484;
-  }
-  li:hover {
-    filter: brightness(110%);
-  }
-  .hamburguesa {
-    display: none;
+    text-align: right;
   }
   table {
     background-color: #2B2B2B;
